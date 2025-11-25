@@ -1,6 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+// Import images from public folder
+const getImageUrl = (filename: string) => {
+  return import.meta.env.BASE_URL + filename;
+};
+
 const Showcase: React.FC = () => {
   return (
     <section id="work" className="w-full max-w-6xl mx-auto px-6 pb-32 z-10 relative">
@@ -24,7 +29,7 @@ const Showcase: React.FC = () => {
         {/* Card 1: VSCode Agent (AI Engineering) */}
         <div className="group relative bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden h-[480px]">
            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
-           <img src="/vscode_agent.jpg" 
+           <img src={getImageUrl("vscode_agent.jpg")} 
                 onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2940&auto=format&fit=crop'}
                 className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0" alt="Code Agent" />
            
@@ -40,7 +45,7 @@ const Showcase: React.FC = () => {
         {/* Card 2: Xiaohongshu (Creative AI) */}
         <div className="group relative bg-white/5 border border-red-900/30 hover:border-red-500/50 transition-all duration-500 overflow-hidden h-[480px]">
            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
-           <img src="/xiaohongshu.jpg"
+           <img src={getImageUrl("xiaohongshu.jpg")}
                 onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2874&auto=format&fit=crop'}
                 className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" alt="Xiaohongshu" />
            
@@ -59,7 +64,7 @@ const Showcase: React.FC = () => {
         {/* Card 3: RAG (AI Engineering) */}
         <div className="group relative bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden h-[480px]">
            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
-           <img src="/RAG.png"
+           <img src={getImageUrl("RAG.png")}
                 onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2865&auto=format&fit=crop'}
                 className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0" alt="RAG" />
            
@@ -75,7 +80,7 @@ const Showcase: React.FC = () => {
         {/* Card 4: BYD Insurance (Core Engineering) */}
         <div className="group relative bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden h-[480px]">
            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
-           <img src="/cheqi.png"
+           <img src={getImageUrl("cheqi.png")}
                 onError={(e) => e.currentTarget.src = 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2940&auto=format&fit=crop'}
                 className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0" alt="Architecture" />
            

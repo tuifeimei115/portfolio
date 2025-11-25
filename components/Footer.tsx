@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
               <h3 className="text-2xl font-bold text-gray-800 mb-2">book 思议</h3>
               <p className="text-gray-500 mb-6">北京 朝阳</p>
               <img 
-                src="/wechat-qr.jpg" 
+                src={`${import.meta.env.BASE_URL}wechat-qr.jpg`}
                 alt="WeChat QR Code" 
                 className="w-full max-w-sm mx-auto rounded-lg shadow-lg"
               />
